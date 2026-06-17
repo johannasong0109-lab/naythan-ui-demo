@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naythan Tech - Logo Wall Demo</title>
+    <style>
+        body {
+            background-color: #f4f5f7;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+            background: white;
+            padding: 50px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+        h2 {
+            color: #1a1a1a;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        p {
+            color: #666;
+            margin-bottom: 40px;
+            font-size: 14px;
+        }
+        .logo-wall {
+            display: flex;
+            gap: 50px;
+            align-items: center;
+            justify-content: center;
+        }
+        /* 💡 核心：欧美B2B标准的灰色滤镜 */
+        .client-logo {
+            width: 130px;
+            height: auto;
+            filter: grayscale(100%); /* 变成纯灰 */
+            opacity: 0.4;            /* 降低透明度，使其内敛 */
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94); /* 丝滑过渡 */
+            cursor: pointer;
+        }
+        /* 💡 核心：鼠标悬停恢复彩色并放大 */
+        .client-logo:hover {
+            filter: grayscale(0%);   /* 完美恢复彩色 */
+            opacity: 1;              /* 透明度变满 */
+            transform: scale(1.08);  /* 优雅放大 */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Global Customers Logo Wall</h2>
+        <p>💡 Hover your mouse over the logos to see the Monochrome Effect.</p>
+        
+        <div class="logo-wall">
+            <img class="client-logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/BorgWarner_logo.svg/1200px-BorgWarner_logo.svg.png" alt="BorgWarner">
+            <img class="client-logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Microsoft_logo_%282012%29.svg/1200px-Microsoft_logo_%282012%29.svg.png" alt="Microsoft">
+            <img class="client-logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Lenovo_logo_2015.svg/1200px-Lenovo_logo_2015.svg.png" alt="Lenovo">
+        </div>
+    </div>
+
+</body>
+</html>
